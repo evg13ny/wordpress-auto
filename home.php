@@ -167,30 +167,32 @@ Template Name: home
           <li class="contacts__item">
             <p class="contacts__item-title">Адрес</p>
             <p class="contacts__item-text">
-              Киев, Подол <br>
-              ул. Константиновская, д.71
+
+              <?php the_field('address'); ?>
+
             </p>
           </li>
           <li class="contacts__item">
             <p class="contacts__item-title">Время работы</p>
             <p class="contacts__item-text">
-              Пн-Сб: с 9:00 до 19:00, <br>
-              Вс: выходной
+
+              <?php the_field('working-hours'); ?>
+
             </p>
           </li>
           <li class="contacts__item">
             <p class="contacts__item-title">Телефон</p>
             <p class="contacts__item-text">
-              +38 (050) 555 66 77
+              <a href="tel:<?php the_field('phone-number'); ?>"><?php the_field('phone'); ?></a>
             </p>
           </li>
         </ul>
       </div>
       <form class="contacts__form">
         <h2 class="title contacts__title">Оставить заявку</h2>
-        <input class="contacts__input" type="text" placeholder="Как Вас зовут?">
-        <input class="contacts__input" type="tel" placeholder="Ваш номер телефона">
-        <button class="contacts__btn button" type="submit">Отправить заявку</button>
+
+        <?= do_shortcode('[contact-form-7 id="32" title="Контактная форма"]'); ?>
+
       </form>
     </div>
   </div>
