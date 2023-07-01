@@ -23,13 +23,13 @@
       </div>
       <div class="header__content">
         <h1 data-wow-delay=".5s" class="header__title wow animate__fadeInLeft">
-          авто из сша “под ключ”
+          <?php the_field('title'); ?>
         </h1>
         <h2 data-wow-delay="1s" class="header__subtitle wow animate__fadeInLeft">
-          ЗАКАЖИ СЕБЕ АВТО ИЗ США С ВЫГОДОЙ ДО 40%
+          <?php the_field('trigger'); ?>
         </h2>
         <p data-wow-delay="1.5s" class="header__text wow animate__fadeInLeft">
-          Подбор, покупка, доставка, растаможка, ремонт, оформление по договору
+          <?php the_field('text'); ?>
         </p>
         <a class="button" href="#">КОНСУЛЬТАЦИЯ ЭКСПЕРТА</a>
         <div class="social header__social">
@@ -54,7 +54,7 @@
             </svg>
           </a>
         </div>
-        <img data-wow-delay="2s" class="header__images wow animate__fadeInUpBig" src="<?php bloginfo('template_url'); ?>/assets/images/ford-mustang.png" alt="ford mustang">
+        <img data-wow-delay="2s" class="header__images wow animate__fadeInUpBig" src="<?php the_field('top-image'); ?>" alt="ford mustang">
       </div>
     </div>
   </header>

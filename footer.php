@@ -19,7 +19,7 @@
         </a>
       </div>
 
-      <a class="footer__copy" href="#">
+      <a class="footer__copy" href="<?= get_page_link(74); ?>">
         Политика конфиденциальности
       </a>
     </div>
